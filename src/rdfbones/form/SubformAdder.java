@@ -9,9 +9,20 @@ public class SubformAdder extends FormContainer{
 	public SubformAdder(String uri){
 		
 		super(uri);
-		
+		this.setCardinality();
 	}
 	
+	public void  setCardinality(){
+	
+		String SPARQL = ""
+				+ "SELECT ?min ?max "
+				+ "WHERE {"
+				+ "	 	OPTIONAL { ?uri		wa:minCardinality				?min . }	"
+				+ "	 	OPTIONAL { ?uri		wa:maxCardinality				?max . }	"
+				+ "   FILTER ( ?uri = <" + this.uri + "> )"  
+				+ "	}";
+	}
+
 	@Override
 	public String getType(){
 		return SubformAdder.TYPE;

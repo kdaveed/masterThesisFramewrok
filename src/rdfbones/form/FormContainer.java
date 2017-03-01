@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import rdfbones.utils.FormElementUtil;
+import rdfbones.utils.Util;
 
 public class FormContainer extends FormElement {
 
@@ -13,7 +13,6 @@ public class FormContainer extends FormElement {
 		private static final String TYPE = "FORMCONTAINER";
 		
 		public FormContainer(String uri){
-			
 			super(uri);
 			this.setElements();
 		}
@@ -29,12 +28,12 @@ public class FormContainer extends FormElement {
 					+ "}";
 			
 			//EXECUTION
-
+			
 			List<Map<String, String>> elements = new ArrayList<Map<String, String>>(); 
 			for(Map<String, String> element : elements){
 				String uri = element.get("element");
 				String type = element.get("type");
-				this.formElements.put(uri, FormElementUtil.getElement(uri, type));
+				this.formElements.put(uri, Util.getElement(uri, type));
 			}
 		}
 		

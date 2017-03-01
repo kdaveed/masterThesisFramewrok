@@ -4,9 +4,8 @@ import rdfbones.form.FormContainer;
 import rdfbones.form.FormElement;
 import rdfbones.form.SubformAdder;
 
-public class FormElementUtil {
+public class Util {
 
-	
 	public static FormElement getElement(String uri, String type){
 		
 		switch(type){

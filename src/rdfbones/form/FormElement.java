@@ -33,7 +33,7 @@ public class FormElement {
 					+ "   OPTIONAL { ?uri   wa:represents 	?variableUri . }"
 					+ "   FILTER ( ?uri = <" + this.uri + "> )"  
 					+ "	} ";
-			
+
 			//set the fields title, inline, number variableUri
 		}
 }

@@ -1,6 +1,6 @@
 package rdfbones.form;
 
-public class InstanceSelectorSubformAdder extends SubformAdder {
+public class InstanceSelectorSubformAdder extends SelectorSubformAdder {
 
 	public InstanceSelectorSubformAdder(String uri) {
 		super(uri);
