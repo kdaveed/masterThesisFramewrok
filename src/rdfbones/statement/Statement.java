@@ -13,5 +13,13 @@ public class Statement {
 		this.uri = uri;
 	}
 	
+	public Variable getObject(Variable subject){
+		
+		if(this.subject.uri.equals(subject.uri)){
+			return this.object;
+		} else {
+			return this.subject;
+		}
+	}
 }
 

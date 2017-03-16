@@ -1,19 +1,24 @@
 package rdfbones.variable;
 
+import java.util.List;
+
+import rdfbones.form.FormElement;
 import rdfbones.process.Graph;
+import rdfbones.statement.Statement;
 
 public class Variable {
 
 	
-	public Graph graph;
+	public Graph graph = null;
 	public String uri;
 	public String variableName;
 	public String constantValue;
 	public String mainInput;
-	
+	public FormElement formElement = null;
+	public List<Statement> statements = new ArrayList<Statement>(); 
+
 	
 	public Variable(String uri){
-	
 		this.uri = uri;
 		this.setLiterals();
 	}
@@ -28,9 +33,7 @@ public class Variable {
 				+ "	 	OPTIONAL { ?uri		wa:mainInput					?mainInput . }	"
 				+ "   FILTER ( ?uri = <" + this.uri + "> )"  
 				+ "	} ";
-		
 		//set the fields variables variableName, constantValue, mainInput
-		
 	}
 	
 }

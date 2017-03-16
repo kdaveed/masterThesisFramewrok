@@ -6,6 +6,4 @@ public class TypeStatement extends Statement {
 		super(uri);
 		// TODO Auto-generated constructor stub
 	}
-
-	
 }

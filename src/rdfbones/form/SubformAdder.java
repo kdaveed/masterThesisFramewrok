@@ -22,11 +22,9 @@ public class SubformAdder extends FormContainer{
 				+ "   FILTER ( ?uri = <" + this.uri + "> )"  
 				+ "	}";
 	}
-
+	
 	@Override
 	public String getType(){
 		return SubformAdder.TYPE;
 	}
-	
 }
-
